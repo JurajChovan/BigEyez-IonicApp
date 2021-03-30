@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Removed buddies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let ReUser of ReUsers" routerLink="/buddy/{{ ReUser.ID }}">
+        <ion-avatar slot="start">
+        <img src="http://bigeyez/public/{{ReUser.Location}}/{{ ReUser.FileName }}"/>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ ReUser.FirstName }} {{ ReUser.LastName }}</h2>
+        <h3>Mobile: {{ ReUser.Mobile }}</h3>
+        <p><img src="http://bigeyez/public/{{ReUser.Location}}/{{ ReUser.Country }}.gif"/> {{ ReUser.Area }}</p>
+        <p>Last update: {{ ReUser.LastUpdate }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
