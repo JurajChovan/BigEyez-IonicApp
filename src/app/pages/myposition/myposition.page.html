@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>My GPS position</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <div id="mapContainer" style="width:100%;height:490px;"></div>
+    </ion-card-header>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button color="primary" expand="block" shape="round" size="small" (click)="UpdateGPSPos()">Update My GPS Position</ion-button>
+      </ion-col>
+    </ion-row>
+    </ion-card>
+
+</ion-content>
