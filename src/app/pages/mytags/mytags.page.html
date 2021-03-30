@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>All my tags</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let Tag of AllTags">
+      {{ Tag.Tag }}
+      <ion-buttons slot="end">
+        <ion-button color="medium" size="small" (click)="showPromptToEditTag(Tag.ID, Tag.Tag)"><ion-icon name="create-outline"></ion-icon></ion-button>
+        <ion-button color="medium" size="small" (click)="showConfirmToDeleteTag(Tag.ID, Tag.Tag)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+  <ion-button color="primary" expand="block" shape="round" size="small" (click)="showModalToAddTag()">Add new tag</ion-button>
+</ion-content>
