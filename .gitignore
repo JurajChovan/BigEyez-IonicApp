@@ -29,3 +29,10 @@ npm-debug.log*
 /platforms
 /plugins
 /www
+_citaj_*.ma!
+_citaj*
+/src/assets/images
+/src/assets/icon
+/src/assets/fonts
+/src/app/components/configuration
+/src/app/services/common-functions*
