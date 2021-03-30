@@ -1,0 +1,18 @@
+{
+    "success": true,
+    "data": [
+        {
+            "id": 11,
+            "Stat": "free"
+        },
+        {
+            "id": 12,
+            "Stat": "basic"
+        },
+        {
+            "id": 13,
+            "Stat": "full"
+        }
+    ],
+    "message": "Toto je info z DB prístupné cez API kontroler ...2021-02-18 14:35:15"
+}
