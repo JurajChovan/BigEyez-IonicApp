@@ -9,6 +9,7 @@ Ionic (ver.5) mobilná aplikácia pre projekt BigEyez
 
 3.page "Profile" (of logged user) (1/2):<br/>
 ![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-myprofile_01.PNG)
+
 3.page "Profile" (of logged user) (2/2):<br/>
 ![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-myprofile_02.PNG)
 
@@ -27,5 +28,29 @@ Ionic (ver.5) mobilná aplikácia pre projekt BigEyez
 8.page "My buddies":<br/>
 ![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-mybuddies.PNG)
 
-9.page "Me on buddy lists":<br/>
+9.page "Me on buddy lists" (1/3):<br/>
 ![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-meonlists.PNG)
+
+9.page "Me on buddy lists" (2/3):<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-meonlists_02.PNG)
+
+9.page "Me on buddy lists" (3/3):<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-meonlists_03.PNG)
+
+10.page "All my buddies" (1/2):<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-allmybuddies.PNG)
+
+10.page "All my buddies" (2/2):<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-allmybuddies_02.PNG)
+
+11.page "My accepted buddies":<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-accepted.PNG)
+
+12.page "My waited buddies":<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-waited.PNG)
+
+13.page "My removed buddies":<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-removed.PNG)
+
+14.page "My banned buddies":<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-banned.PNG)
