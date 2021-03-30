@@ -8,8 +8,9 @@ Ionic (ver.5) mobilná aplikácia pre projekt BigEyez
 ![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-sidemenu.PNG)
 
 3.page "Profile" (of logged user):<br/>
-![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-myprofile01.PNG)<br/>
-![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-myprofile02.PNG)
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-myprofile_01.PNG)
+<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-myprofile_02.PNG)
 
 4.page "My tags":<br/>
 ![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-mytags.PNG)
