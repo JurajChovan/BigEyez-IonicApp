@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Me on lists</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header color="success">
+      <ion-label>Me as accepted buddy:</ion-label>
+    </ion-list-header>
+    <div *ngFor="let Buddy of AllMeBuddies">
+      <div *ngIf="(Buddy.StatusID===1)">
+        <ion-item>
+          <ion-avatar width="160%" slot="start">
+            <img src="http://bigeyez/public/{{Buddy?.Location}}/{{ Buddy?.FileName }}"/>
+          </ion-avatar>
+          <ion-label>
+            <h2>{{ Buddy.FirstName }} {{ Buddy.LastName }}</h2>
+          </ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="medium" size="small" (click)="showConfirmToDeleteTag(Buddy.UserID, Buddy.FirstName, Buddy.LastName)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+          </ion-buttons>
+        </ion-item>
+      </div>
+    </div>
+  </ion-list>
+  <ion-list>
+    <ion-list-header color="primary">
+      <ion-label>Me as waited buddy:</ion-label>
+    </ion-list-header>
+    <div *ngFor="let Buddy of AllMeBuddies">
+      <div *ngIf="(Buddy.StatusID===2)">
+        <ion-item>
+          <ion-avatar width="160%" slot="start">
+            <img src="http://bigeyez/public/{{Buddy?.Location}}/{{ Buddy?.FileName }}"/>
+          </ion-avatar>
+          <ion-label>
+            <h2>{{ Buddy.FirstName }} {{ Buddy.LastName }}</h2>
+          </ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="medium" size="small" (click)="showConfirmToDeleteTag(Buddy.UserID, Buddy.FirstName, Buddy.LastName)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+          </ion-buttons>
+        </ion-item>
+      </div>
+    </div>
+  </ion-list>
+  <ion-list>
+    <ion-list-header color="danger">
+      <ion-label>Me as removed buddy:</ion-label>
+    </ion-list-header>
+    <div *ngFor="let Buddy of AllMeBuddies">
+      <div *ngIf="(Buddy.StatusID===4)">
+        <ion-item>
+          <ion-avatar width="160%" slot="start">
+            <img src="http://bigeyez/public/{{Buddy?.Location}}/{{ Buddy?.FileName }}"/>
+          </ion-avatar>
+          <ion-label>
+            <h2>{{ Buddy.FirstName }} {{ Buddy.LastName }}</h2>
+          </ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="medium" size="small" (click)="showConfirmToDeleteMe(Buddy.UserID, Buddy.FirstName, Buddy.LastName)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+          </ion-buttons>
+        </ion-item>
+      </div>
+    </div>
+  </ion-list>
+</ion-content>
