@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Waited buddies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let WaUser of WaUsers" routerLink="/buddy/{{ WaUser.ID }}">
+        <ion-avatar slot="start">
+        <img src="http://bigeyez/public/{{WaUser.Location}}/{{ WaUser.FileName }}"/>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ WaUser.FirstName }} {{ WaUser.LastName }}</h2>
+        <h3>Mobile: {{ WaUser.Mobile }}</h3>
+        <p><img src="http://bigeyez/public/{{WaUser.Location}}/{{ WaUser.Country }}.gif"/> {{ WaUser.Area }}</p>
+        <p>Last update: {{ WaUser.LastUpdate }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
