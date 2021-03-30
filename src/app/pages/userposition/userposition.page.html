@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button><ion-icon name="arrow-back"></ion-icon></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ UserInfo?.UserName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3">
+            <ion-avatar item-start>
+              <img src="http://bigeyez/public/{{ UserInfo?.Location }}/{{ UserInfo?.FileName }}"/>
+            </ion-avatar>
+          </ion-col>
+          <ion-col size="9">
+            <ion-card-subtitle>is <b>{{ UserInfo?.Distance }}</b> away</ion-card-subtitle>
+            <p> (last update: {{ UserInfo?.DateDiffInDays }} days ago)</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <div id="mapContainer" style="width:100%;height:520px;"></div>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
