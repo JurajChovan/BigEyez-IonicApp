@@ -54,3 +54,31 @@ Ionic (ver.5) mobilná aplikácia pre projekt BigEyez
 
 14.page "My banned buddies":<br/>
 ![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-banned.PNG)
+
+15.page "Buddy" (1/2):<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-buddy_01.PNG)
+
+15.page "Buddy" (2/2):<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-buddy_02.PNG)
+
+16.page "Search by tag" (1/5):<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-searchbytag_01.PNG)
+
+16.page "Search by tag" (2/5):<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-searchbytag_02.PNG)
+
+16.page "Search by tag" (3/5):<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-searchbytag_03.PNG)
+
+16.page "Search by tag" (4/5):<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-searchbytag_04.PNG)
+
+16.page "Search by tag" (5/5):<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-searchbytag_05.PNG)
+
+17.page "Any user":<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-user.PNG)
+
+18.page "Ask user" (1/5):<br/>
+![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-askuser.PNG)
+
