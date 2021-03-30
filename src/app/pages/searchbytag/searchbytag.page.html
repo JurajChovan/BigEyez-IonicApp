@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Search by tag</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+    <ion-item>
+      <ion-label position="floating">Search by tag:</ion-label>
+      <ion-input formControlName="searchText" clearInput value="tag" type="text" required="true"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.searchText.errors?.required">
+      Tag is required.
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.searchText.errors?.maxlength">
+      Tag should be max 32 chars long.
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.searchText.errors?.minlength">
+      Tag should be min 3 chars long.
+    </span>
+    <ion-item>
+      <ion-label position="fixed">In distance of:</ion-label>
+      <ion-input formControlName="toDistance" type="text" placeholder="1 km" value="{{ inDistanceOfValue }}" (click)="showRadioAlert()" required="true"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.toDistance.errors?.required">
+      Distance is required.
+    </span>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" expand="block" shape="round" size="small">Search</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <ion-list>
+    <ion-item *ngFor="let User of UsersWithTag">
+      <ion-avatar slot="start">
+        <img src="http://bigeyez/public/{{User.Location}}/{{ User.FileName }}"/>
+      </ion-avatar>
+      <ion-label><h2>{{ User.UserName }}</h2><h4>({{ User.FirstName }} {{ User.LastName }})</h4></ion-label>
+      <ion-buttons>
+        <ion-button color="medium" size="small" (click)="showConfirmToAskBuddy(User.ID, User.UserName)"><ion-icon name="person-add-outline"></ion-icon></ion-button>
+        <ion-button color="medium" size="small" routerLink="/userposition/{{ User.ID }}"><ion-icon name="globe-outline"></ion-icon></ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
