@@ -1,0 +1,141 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button><ion-icon name="arrow-back"></ion-icon></ion-back-button>
+    </ion-buttons>
+    <ion-title>Buddy profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3">
+            <ion-avatar item-start>
+              <img src="http://bigeyez/public/{{ BuddyInfo?.Location }}/{{ BuddyInfo?.FileName }}"/>
+            </ion-avatar>
+          </ion-col>
+          <ion-col size="9">
+            <ion-card-title>{{ BuddyInfo?.FirstName }} {{ BuddyInfo?.LastName }}</ion-card-title>
+            <ion-card-subtitle>is <b>{{ BuddyInfo?.Distance }}</b> away</ion-card-subtitle>
+            <div *ngIf="(BuddyInfo?.StatusID===1)"><img src="http://bigeyez/public/images/ACCEPTED.png" height="14px"/></div>
+            <div *ngIf="(BuddyInfo?.StatusID===2)"><img src="http://bigeyez/public/images/WAITED.png" height="14px"/></div>
+            <div *ngIf="(BuddyInfo?.StatusID===3)"><small>[N/A] status</small></div>
+            <div *ngIf="(BuddyInfo?.StatusID===4)"><img src="http://bigeyez/public/images/REMOVED.png" height="14px"/></div>
+            <div *ngIf="(BuddyInfo?.StatusID===5)"><img src="http://bigeyez/public/images/BANNED.png" height="14px"/></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3">
+            Email:
+          </ion-col>
+          <ion-col size="9">
+            {{ BuddyInfo?.email }}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            Mobile:
+          </ion-col>
+          <ion-col size="9">
+            {{ BuddyInfo?.Mobile }}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <p>Country/Area:</p>
+          </ion-col>
+          <ion-col size="8">
+            <p><img src="http://bigeyez/public/{{ BuddyInfo?.Location }}/{{ BuddyInfo?.Country }}.gif"/> {{ BuddyInfo?.Area }}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <p>GPS position:</p>
+          </ion-col>
+          <ion-col size="8">
+            <p>Lat: {{ BuddyInfo?.Lat }}</p>
+            <p>Lng: {{ BuddyInfo?.Lng }}</p>
+            <b>{{ BuddyInfo?.Distance }}</b> far away
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            Last update:
+          </ion-col>
+          <ion-col size="8">
+            {{ BuddyInfo?.LastUpdate }}
+            <p>({{ BuddyInfo?.DateDiffInDays }} days ago)</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <div *ngIf="(BuddyInfo?.StatusID===1)">
+    <ion-row>
+      <ion-col size="4">
+        <ion-button color="primary" expand="block" shape="round" size="small" (click)="showConfirmToWaited(BuddyInfo.ID, BuddyInfo.FirstName, BuddyInfo.LastName, BuddyInfo.StatusID)">Wait</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button color="warning" expand="block" shape="round" size="small" (click)="showConfirmToRemoved(BuddyInfo.ID, BuddyInfo.FirstName, BuddyInfo.LastName, BuddyInfo.StatusID)">Remove</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button color="danger" expand="block" shape="round" size="small" (click)="showConfirmToDelete(BuddyInfo.ID, BuddyInfo.FirstName, BuddyInfo.LastName, BuddyInfo.StatusID)">Delete</ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div *ngIf="(BuddyInfo?.StatusID===2)">
+    <ion-row>
+      <ion-col size="4">
+        <ion-button color="success" expand="block" shape="round" size="small" (click)="showConfirmToAccepted(BuddyInfo.ID, BuddyInfo.FirstName, BuddyInfo.LastName, BuddyInfo.StatusID)">Accept</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button color="warning" expand="block" shape="round" size="small" (click)="showConfirmToRemoved(BuddyInfo.ID, BuddyInfo.FirstName, BuddyInfo.LastName, BuddyInfo.StatusID)">Remove</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button color="danger" expand="block" shape="round" size="small" (click)="showConfirmToDelete(BuddyInfo.ID, BuddyInfo.FirstName, BuddyInfo.LastName, BuddyInfo.StatusID)">Delete</ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div *ngIf="(BuddyInfo?.StatusID===3)"></div>
+  <div *ngIf="(BuddyInfo?.StatusID===4)">
+    <ion-row>
+      <ion-col size="4">
+        <ion-button color="primary" expand="block" shape="round" size="small" (click)="showConfirmToWaited(BuddyInfo.ID, BuddyInfo.FirstName, BuddyInfo.LastName, BuddyInfo.StatusID)">Wait</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button color="danger" expand="block" shape="round" size="small" (click)="showConfirmToDelete(BuddyInfo.ID, BuddyInfo.FirstName, BuddyInfo.LastName, BuddyInfo.StatusID)">Delete</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button color="dark" expand="block" shape="round" size="small" (click)="showConfirmToBanned(BuddyInfo.ID, BuddyInfo.FirstName, BuddyInfo.LastName, BuddyInfo.StatusID)">Ban</ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div *ngIf="(BuddyInfo?.StatusID===5)">
+    <ion-row>
+      <ion-col size="2"></ion-col>
+      <ion-col size="4">
+        <ion-button color="primary" expand="block" shape="round" size="small" (click)="showConfirmToWaited(BuddyInfo.ID, BuddyInfo.FirstName, BuddyInfo.LastName, BuddyInfo.StatusID)">Wait</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button color="danger" expand="block" shape="round" size="small" (click)="showConfirmToDelete(BuddyInfo.ID, BuddyInfo.FirstName, BuddyInfo.LastName, BuddyInfo.StatusID)">Delete</ion-button>
+      </ion-col>
+      <ion-col size="2"></ion-col>
+    </ion-row>
+  </div>
+  <ion-card>
+    <ion-card-header>
+      <div id="mapContainer" style="width:100%;height:520px;"></div>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
