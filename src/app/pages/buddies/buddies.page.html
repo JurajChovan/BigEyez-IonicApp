@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>All my buddies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-item *ngFor="let Buddy of AllBuddies" routerLink="/buddy/{{ Buddy.ID }}">
+      <ion-avatar width="160%" slot="start">
+        <img src="http://bigeyez/public/{{Buddy.Location}}/{{ Buddy.FileName }}"/>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ Buddy.FirstName }} {{ Buddy.LastName }}</h2>
+        <h3>Mobile: {{ Buddy.Mobile }}</h3>
+        <p><img src="http://bigeyez/public/{{Buddy.Location}}/{{ Buddy.Country }}.gif"/> {{ Buddy.Area }}</p>
+        <div *ngIf="(Buddy.StatusID===1)"><img src="http://bigeyez/public/images/ACCEPTED.png" height="12px"/><small> Last update: {{ Buddy.LastUpdate }}</small></div>
+        <div *ngIf="(Buddy.StatusID===2)"><img src="http://bigeyez/public/images/WAITED.png" height="12px"/><small> Last update: {{ Buddy.LastUpdate }}</small></div>
+        <div *ngIf="(Buddy.StatusID===3)"><small>[N/A]  Last update: {{ Buddy.LastUpdate }}</small></div>
+        <div *ngIf="(Buddy.StatusID===4)"><img src="http://bigeyez/public/images/REMOVED.png" height="12px"/><small> Last update: {{ Buddy.LastUpdate }}</small></div>
+        <div *ngIf="(Buddy.StatusID===5)"><img src="http://bigeyez/public/images/BANNED.png" height="12px"/><small> Last update: {{ Buddy.LastUpdate }}</small></div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
