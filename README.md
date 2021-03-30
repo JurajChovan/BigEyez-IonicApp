@@ -1,7 +1,7 @@
 # BigEyez-IonicApp
 Ionic (ver.5) mobilná aplikácia pre projekt BigEyez
 
-1.page "Home":
+1.page "Home":<br/>
 ![alt text](https://github.com/JurajChovan/BigEyez-IonicApp/blob/master/screenshots/20210330-home.PNG)
 
 2.page "Home" with sidemenu:
