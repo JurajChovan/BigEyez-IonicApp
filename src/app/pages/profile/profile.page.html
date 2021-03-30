@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>My profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-card-title>{{ Profile?.FirstName }} {{ Profile?.LastName }}</ion-card-title>
+            <ion-card-subtitle>[ID: {{ Profile?.ID }}] {{ Profile?.UserName }}</ion-card-subtitle>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">  
+            <img src="http://bigeyez/public/{{ Profile?.Location }}/{{ Profile?.FileName }}"/>
+        </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3">
+            Email:
+          </ion-col>
+          <ion-col size="9">
+            {{ Profile?.email }}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            Mobile:
+          </ion-col>
+          <ion-col size="9">
+            {{ Profile?.Mobile }}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            Skype:
+          </ion-col>
+          <ion-col size="9">
+            {{ Profile?.Skype }}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            ICQ:
+          </ion-col>
+          <ion-col size="9">
+            {{ Profile?.ICQ }}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <p>Country/Area:</p>
+          </ion-col>
+          <ion-col size="8">
+            <p><img src="http://bigeyez/public/{{ Profile?.Location }}/{{ Profile?.Country }}.gif"/> {{ Profile?.Area }}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <p>Your position:</p>
+          </ion-col>
+          <ion-col size="8">
+            <p>Lat: {{ Profile?.Lat }}</p>
+            <p>Lng: {{ Profile?.Lng }}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            Last update:
+          </ion-col>
+          <ion-col size="8">
+            {{ Profile?.updated_at }}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-row>
+    <ion-col size="6">
+      <ion-button color="light" expand="block" shape="round" size="small" routerLink='/mytags'>My tags</ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button color="light" expand="block" shape="round" size="small" routerLink='/myposition'>Set position</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6">
+      <ion-button color="light" expand="block" shape="round" size="small" routerLink='/accepted'>My buddies</ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button color="light" expand="block" shape="round" size="small" routerLink='/me'>Me on lists</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-card>
+    <ion-card-header>
+      <div id="mapContainer" style="width:100%;height:520px;"></div>
+    </ion-card-header>
+  </ion-card>
+  
+</ion-content>
